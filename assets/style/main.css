@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+:root {
+    --primary-color: #7E3EC4; /* Roxo */
+    --secondary-color: #FD9C09; /* Laranja */
+    --danger-color: #e74c3c;
+    --light-gray: #f8f9fa;
+    --dark-text: #343a40;
+}
+
+body {
+    background-color: var(--light-gray);
+    color: var(--dark-text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.img-logo{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+
+.row{
+    display: flex;
+    justify-content: center}
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.nav-pills .nav-link {
+    color: var(--dark-text);
+    font-weight: 500;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.tab-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-primary:hover {
+    background-color: #FD9C09;
+    border-color: #FD9C09;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.btn-secondary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+        
+.btn-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(46, 204, 113, 0.25);
+}
+
+.card-service {
+    transition: transform .2s;
+}
+.card-service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,.15);
+}
+.card-service i {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.stock-low {
+    background-color: rgba(231, 76, 60, 0.15) !important;
+    font-weight: bold;
+    color: var(--danger-color);
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+.calendar-day {
+    border: 1px solid #ddd;
+    min-height: 120px;
+    padding: 5px;
+    background-color: #fdfdfd;
+}
+.calendar-day-header {
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+.appointment-block {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.appointment-block:hover {
+            opacity: 0.8;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #receipt-modal, #receipt-modal * {
+        visibility: visible;
+    }
+    #receipt-modal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .modal-footer {
+        display: none;
+    }
+}
