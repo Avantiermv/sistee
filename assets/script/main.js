@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
             renderRelatorios();
         };
 
-
         const formCliente = document.getElementById('form-cliente');
         const tabelaClientes = document.getElementById('tabela-clientes');
         
